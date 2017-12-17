@@ -1,11 +1,24 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, TextInput, View } from 'react-native';
 
 
 export default class App extends Component {
+  constructor() {
+    super();
+    this.state = { hidden: true };
+  }
+
   render() {
+    const hidden = this.state.hidden;
     return (
-      <View style={style.container}><Text>Hello, World!</Text></View>
+      <View style={style.container}>
+        <TextInput
+          value="ABCDE"
+          secureTextEntry
+          keyboardType={hidden ? 'default' : 'visible-password'}
+          onChangeText={() => { this.setState({ hidden: !hidden }); }}
+        />
+      </View>
     );
   }
 }
