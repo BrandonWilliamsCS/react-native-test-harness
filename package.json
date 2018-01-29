@@ -1,40 +1,33 @@
 {
-	"name": "react-native-test-harness",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"start": "node node_modules/react-native/local-cli/cli.js start",
-		"android": "react-native run-android",
-		"ios": "react-native run-ios",
-		"test": "jest --coverage"
-	},
-	"dependencies": {
-		"immutable": "^3.8.2",
-		"react": "16.0.0",
-		"react-native": "0.51.0"
-	},
-	"devDependencies": {
-		"babel-jest": "21.2.0",
-		"babel-preset-react-native": "4.0.0",
-		"enzyme": "^3.2.0",
-		"enzyme-adapter-react-16": "^1.1.0",
-		"jest": "21.2.1",
-		"react-dom": "^16.0.0-0",
-		"react-test-renderer": "16.0.0"
-	},
-	"jest": {
-		"preset": "react-native",
-		"testRegex": "__test__/.+\\.js$",
-		"coverageDirectory": "coverage",
-		"coverageReporters": [
-			"text",
-			"html"
-		],
-		"collectCoverageFrom": [
-			"./**/*.js",
-			"!./**/*.spec.js",
-			"!./**/*.index.js"
-		],
-		"setupTestFrameworkScriptFile": "<rootDir>/testconfig.js"
-	}
+  "name": "react-native-test-harness",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "node node_modules/react-native/local-cli/cli.js start",
+    "android": "react-native run-android",
+    "ios": "react-native run-ios",
+    "test": "jest --coverage"
+  },
+  "dependencies": {
+    "react": "16.0.0",
+    "react-native": "0.51.0",
+    "react-native-material-textfield": "^0.12.0"
+  },
+  "devDependencies": {
+    "babel-jest": "21.2.0",
+    "babel-preset-react-native": "4.0.0",
+    "enzyme": "^3.2.0",
+    "enzyme-adapter-react-16": "^1.1.0",
+    "jest": "21.2.1",
+    "react-dom": "^16.0.0-0",
+    "react-test-renderer": "16.0.0"
+  },
+  "jest": {
+    "preset": "react-native",
+    "testRegex": "__test__/.+\\.js$",
+    "coverageDirectory": "coverage",
+    "coverageReporters": ["text", "html"],
+    "collectCoverageFrom": ["./**/*.js", "!./**/*.spec.js", "!./**/*.index.js"],
+    "setupTestFrameworkScriptFile": "<rootDir>/testconfig.js"
+  }
 }
